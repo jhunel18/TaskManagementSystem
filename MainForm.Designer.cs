@@ -31,6 +31,7 @@
             panel1 = new Panel();
             btnAddTask = new Button();
             label1 = new Label();
+            tasksPanel = new FlowLayoutPanel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -68,16 +69,26 @@
             label1.TabIndex = 0;
             label1.Text = "Task Management App";
             // 
+            // tasksPanel
+            // 
+            tasksPanel.Dock = DockStyle.Fill;
+            tasksPanel.Location = new Point(0, 90);
+            tasksPanel.Name = "tasksPanel";
+            tasksPanel.Size = new Size(1192, 445);
+            tasksPanel.TabIndex = 1;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1192, 535);
+            Controls.Add(tasksPanel);
             Controls.Add(panel1);
             Name = "MainForm";
             Text = "Form1";
             WindowState = FormWindowState.Maximized;
+            Load += MainForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -88,5 +99,6 @@
         private Panel panel1;
         private Label label1;
         private Button btnAddTask;
+        private FlowLayoutPanel tasksPanel;
     }
 }

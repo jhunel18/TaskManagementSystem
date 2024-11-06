@@ -103,6 +103,7 @@
             btnSaveTask.TabIndex = 6;
             btnSaveTask.Text = "Save";
             btnSaveTask.UseVisualStyleBackColor = false;
+            btnSaveTask.Click += btnSaveTask_Click;
             // 
             // groupBox1
             // 
