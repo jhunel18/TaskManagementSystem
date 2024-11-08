@@ -119,9 +119,10 @@ namespace TaskManagementSystem
         private void UpdateTask(TaskItem taskItem)
         {
             // Logic to update the subject
-            var addTaskForm = new UpdateTaskForm();
+            var updateTaskForm = new UpdateTaskForm(taskItem);
+            var task = _taskController.GetTaskById(taskItem.Id);
             //addTaskForm.TaskAdded += LoadTasks;
-            addTaskForm.ShowDialog();
+            updateTaskForm.ShowDialog();
         }
 
         private void DeleteTask(TaskItem taskItem)
