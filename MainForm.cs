@@ -119,7 +119,9 @@ namespace TaskManagementSystem
         private void UpdateTask(TaskItem taskItem)
         {
             // Logic to update the subject
-            MessageBox.Show($"Update subject: {taskItem.TaskName}");
+            var addTaskForm = new UpdateTaskForm();
+            //addTaskForm.TaskAdded += LoadTasks;
+            addTaskForm.ShowDialog();
         }
 
         private void DeleteTask(TaskItem taskItem)
